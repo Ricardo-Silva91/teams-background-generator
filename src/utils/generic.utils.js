@@ -7,7 +7,7 @@ import path from 'path';
 // const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 // eslint-disable-next-line no-nested-ternary
 const pathToTeamsBackgrounds = process.platform.includes('darwin')
-  ? path.resolve('~/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads')
+  ? path.join(process.env.HOME, '/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads')
   : process.platform.includes('win')
     ? path.join(process.env.APPDATA, 'Microsoft/Teams/Backgrounds')
     : null;
