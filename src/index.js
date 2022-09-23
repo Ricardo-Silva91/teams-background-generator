@@ -1,7 +1,7 @@
-import { testUtils } from './utils/generic.utils.js';
+import { downloadImg } from './utils/generic.utils.js';
 
-console.log('here');
+const args = process.argv.slice(2);
+const link = args[0];
+const name = args[1];
 
-const testResult = testUtils();
-
-console.log({ testResult });
+await downloadImg(link, name);
